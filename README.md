@@ -1,0 +1,23 @@
+# PotatoClicker
+
+**PotatoClicker** is a simple idle clicker game created as a bonus for my Assignment 4 in COMP 2150.
+
+## Gameplay
+
+Click the central potato to earn potatoes! Spend your potatoes on upgrades to increase your click value and unlock automatic potato generation.
+
+## Play the Game
+
+You can play **PotatoClicker** directly in your browser:
+
+[Play PotatoClicker](https://JohnnyLee15.github.io/PotatoClicker/)
+
+## Features
+
+- Click-based resource generation
+- Upgrade system to boost efficiency
+- Idle mechanics for passive gameplay
+
+## Developer
+
+Created by Johnny Lee for COMP 2150 - Assignment 4 (Bonus).
