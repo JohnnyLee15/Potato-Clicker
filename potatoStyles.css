@@ -1,0 +1,281 @@
+/* Cartoon Font */
+@font-face {
+    font-family: "Luckiest Guy";
+    src: url(Luckiest_Guy/LuckiestGuy-Regular.ttf);
+}
+
+/* Make sure user cannot drag images or text */
+* {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Main Header Style */
+header {
+    font-family: "Luckiest Guy";
+    text-align: center;
+    font-size: 85px;
+    color: rgb(247, 203, 158);
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: -2px 2px 8px black;
+    border: 10px black;
+}
+
+/* Background of game */
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Creating Main Grid */
+main {
+    font-family: "Luckiest Guy";
+    color: rgb(247, 203, 158);
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: -2px 2px 8px black;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 85vh;
+}
+
+/* Positioning stats box and styles */
+.stats {
+    font-size: clamp(15px, 2vw, 50px);
+    border-radius: 30px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    background-color: rgba(28, 9, 1, 0.95);
+    border: 8px solid black;
+    align-self: start
+}
+
+/* positioning the click potato */
+.click-potato-button {
+    display: flex;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+/* 100ms for click potato transitions */
+.click-potato-button img {
+    width: 90%;
+    transition: transform 0.1s ease;
+    pointer-events: auto;
+}
+
+/* click potato pop out when hovering */
+.click-potato-button img:hover {
+    transform: scale(1.1)
+}
+
+/* click potato shrinks when clicking */
+.click-potato-button img:active {
+    transform: scale(1) translateY(5px);
+}
+
+/* floating text for click potato */
+.float-text {
+    position: absolute;
+    font-size: 40px;
+    pointer-events: none;
+    opacity: 0;
+    animation: floatUp 0.3s ease-out;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation for floating text */
+@keyframes floatUp {
+    0% { 
+        opacity: 1; transform: translate(-50%, -50%); 
+    }
+
+    100% { 
+        opacity: 0; transform: translate(-50%, -200%) scale(1.5); 
+    }
+}
+
+/* Potato bag positioning */
+.potato-bag {
+    display: flex;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    align-items: center;
+    justify-content: start;
+}
+
+.potato-bag img {
+    width: 90%;
+}
+
+/* Fast hands positioning */
+.fast-hands-button {
+    display: flex;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fast-hands-button img {
+    border: 10px solid black;
+    border-radius: 30px;
+    width: 90%;
+}
+
+/* Fand Hands text styles */
+.fast-hands-text {
+    font-size: clamp(15px, 2vw, 45px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* Creating grid for upgrades */
+.upgrade-container {
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(70px, 100px) repeat(4, minmax(100px, 1fr));
+
+    border: 10px solid black;
+    background-color: rgba(28, 9, 1, 0.95);
+    border-radius: 30px;
+    gap: 25px;
+}
+
+/* Styles for upgrade header */
+.upgrader-header {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(40px, 5vw, 80px);
+}
+
+/* Positioning grid buttons */
+.grid-button {
+    display: flex;
+    font-size: 24px;
+    grid-column: span 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.grid-button img {
+    display: block;
+    border: 8px solid black;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Blur and make upgrade buttons pop up
+when hovered over */
+.grid-button:hover img,
+.fast-hands-button:hover img {
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+/* Shrinks upgrade buttons when clicked */
+.grid-button:active img,
+.grid-button:active .button-text,
+.fast-hands-button:active img,
+.fast-hands-button:active .fast-hands-text {
+    transform: scale(1) translateY(5px);
+}
+
+/* Upgrade button text style */
+.button-text {
+    font-size: clamp(10px, 1.5vw, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* Show button text when hovering over */
+.button-text:hover,
+.fast-hands-text:hover {
+    opacity: 1;
+}
+
+/* Timing for button transitions */
+.button-text, .grid-button img,
+.fast-hands-text, .fast-hands-button img {
+    transition: 200ms ease-in-out, transform 100ms ease;
+}
+
+/* Bonus and Achievement message styles */
+.message {
+    position: absolute;
+    font-family: "Luckiest Guy";
+    font-size: 35px;
+    color: rgb(247, 203, 158);
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: -2px 2px 8px black;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    text-align: center;
+}
+
+/* achievement background */
+.achievement {
+    background: rgba(234, 155, 7, 0.6);
+    border: 8px solid rgb(122, 81, 5);
+    border-radius: 10px;
+    padding: 10px;
+    top: 12%;
+}
+
+/* Bonus potato styles */
+.bonus-potato img {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    z-index: 100;
+    transition: transform 0.2s ease;
+    pointer-events: auto;
+}
+
+/* Bonus potatoes pop up when hovering over */
+.bonus-potato img:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Bonus potatoes shrink when clicked */
+.bonus-potato img:active {
+    transform: translateX(-50%) scale(0.8);
+    transition: transform 0.1s ease;
+}
+
+/* hide bonus and achievement text */
+.hidden {
+    display: none;
+}

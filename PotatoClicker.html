@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <meta name = "viewport" content = "width=device-width">
+        <title> Potato Clicker </title>
+        <link rel="stylesheet" href="potatoStyles.css">
+    </head>
+    <body>
+        <!-- Main header -->
+        <header>Potato Clicker</header>
+
+        <!-- Bonus Potatoes -->
+        <div class = "bonus-potato hidden" id = "Black Potato"> 
+            <img draggable="false" src="images/blackPotato.png" 
+            alt="Black Potato">
+        </div>
+
+        <div class = "bonus-potato hidden" id = "Sweet Potato"> 
+            <img draggable="false" src="images/sweetPotato.png" 
+            alt="Sweet Potato">
+        </div>
+
+        <div class = "bonus-potato hidden" id = "Purple Potato"> 
+            <img draggable="false" src="images/purplePotato.png" 
+            alt="Purple Potato">
+        </div>
+
+        <div class = "bonus-potato hidden" id = "Yellow Potato"> 
+            <img draggable="false" src="images/yellowPotato.png" 
+            alt="Yellow Potato">
+        </div>
+
+        <div class = "bonus-potato hidden" id = "Basket Potato"> 
+            <img draggable="false" src="images/basketPotato.png" 
+            alt="Basket of Potatoes">
+        </div>
+
+        <!-- Bonus Message -->
+        <div class = "message hidden" id = "bonus-message">
+            BONUS!
+        </div>
+
+        <!-- Achievement Message -->
+        <div class = "achievement message hidden" id = "achievement-message">
+            ACHIEVEMENT!
+        </div>
+
+        <!-- Main Grid -->
+        <main>
+
+            <!-- Stats Container -->
+            <div class = stats>
+                <p id =  "counter">
+                    Potatoes In Sac: <br> 0
+                </p>
+                <p id = "pps">
+                    Potaotes Per Second (pps): <br> 0
+                </p>
+            </div>
+
+            <!-- Big Potato Container -->
+            <div class = "click-potato-button bounce">
+                <img draggable="false" src="images/clickingPotato.png" 
+                alt="Click Me For Potatoes!"
+                id = "click-potato">
+
+                <div id = "float-text" class = "float-text"></div>
+            </div>
+
+            <!-- Fast Hands Container -->
+            <div class = "fast-hands-button" id = "Fast Hands">
+                <img draggable="false" src="images/upgradePotato.png" 
+                alt="Click Me To Upgrade Click Potato!">
+
+                <div class = "fast-hands-text"
+                id = "Fast Hands-text">
+                    Fast Hands: 0 <br> Cost: 200 <br> +1 per click
+                </div>
+            </div>
+
+            <!-- Potato Bag Container -->
+            <div class = "potato-bag">
+                <img draggable="false" src="images/potatoBag.png" 
+                alt="Your Bag Of Potatoes">
+            </div>
+
+            <!-- 8 button container -->
+            <div class = upgrade-container>
+
+                <!-- Header -->
+                <h2 class = "upgrader-header">Upgrades</h2>
+
+                <!-- Farm Container -->
+                <div class = "grid-button" id ="Farms">
+                    <img draggable="false" src="images/Farm.png" 
+                    alt="Farm Button">
+
+                    <div class = "button-text"
+                    id = "Farms-text">
+                        Farms: 0 <br> Cost: 50 <br> Adds: 1 pps
+                    </div>
+                </div>
+
+                <!-- Harvester Container -->
+                <div class = "grid-button" id = "Harvesters">
+                    <img draggable="false" src="images/Harvester.png" 
+                    alt="Farm Upgrade Button">
+
+                    <div class = "button-text"
+                    id = "Harvesters-text">
+                        Harvesters: 0 <br> Cost: 5000 <br> Farms prod. x2
+                    </div>
+                </div>
+
+                <!-- Food Truck Container -->
+                <div class = "grid-button" id = "Food Trucks">
+                    <img draggable="false" src="images/FoodTruck.png" 
+                    alt="Food Truck Button">
+
+                    <div class = "button-text"
+                    id = "Food Trucks-text">
+                        Food Trucks: 0 <br> Cost: 5000 <br> Adds: 5 pps
+                    </div>
+                </div>
+
+                <!-- Poutine Make Container -->
+                <div class = "grid-button" id = "Poutine Makers">
+                    <img draggable="false" src="images/PoutineMaker.png" 
+                    alt="Food Truck Upgrade Button">
+
+                    <div class = "button-text"
+                    id = "Poutine Makers-text">
+                        Poutine Makers: 0 <br> Cost: 50000 <br> Food Trucks prod. x2
+                    </div>
+                </div>
+
+                <!-- Chips Factory Container -->
+                <div class = "grid-button" id = "Chips Factories">
+                    <img draggable="false" src="images/Factory.png" 
+                    alt="Factory Button">
+
+                    <div class = "button-text"
+                    id = "Chips Factories-text">
+                        Chips Factories: 0 <br> Cost: 50000 <br> Adds: 50 pps
+                    </div>
+                </div>
+
+                <!-- Instant Fryer Container -->
+                <div class = "grid-button" id = "Instant Fryers">
+                    <img draggable="false" src="images/InstantFryer.png" 
+                    alt="Factory Upgrade Button">
+
+                    <div class = "button-text"
+                    id = "Instant Fryers-text">
+                        Instant Fryers: 0 <br> Cost: 500000 <br> Chips Factories prod. x2
+                    </div>
+                </div>
+
+                <!-- Cloner Container -->
+                <div class = "grid-button" id = "Potato Cloners">
+                    <img draggable="false" src="images/Cloner.png" 
+                    alt="Cloner Button">
+
+                    <div class = "button-text"
+                    id = "Potato Cloners-text">
+                        Potato Cloners: 0 <br> Cost: 200000 <br> Adds: 250 pps
+                    </div>
+                </div>
+                
+                <!-- Advanced DNA Container -->
+                <div class = "grid-button" id = "Advanced DNAs">
+                    <img draggable="false" src="images/DNA.png" 
+                    alt="Cloner Upgrade Button">
+
+                    <div class = "button-text"
+                    id = "Advanced DNAs-text">
+                        Advanced DNAs: 0 <br> Cost: 2000000 <br> Potato Cloners prod. x2
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Conntecting JS scripts -->
+        <script src = "Counter.js"></script>
+        <script src = "Buttons.js"></script>
+
+        <script>
+            // Creating Counter
+            const counter = new Counter("counter", "pps", "bonus-message", "achievement-message");
+
+            // Creating big potato
+            const clickPotato = new ClickingPotato("click-potato", counter, "float-text");
+
+            // Creating Buildings
+            const farm = new BuildingButton("Farms", counter, 50, 1);
+            const foodTruck = new BuildingButton("Food Trucks", counter, 5000, 5);
+            const factory = new BuildingButton("Chips Factories", counter, 50000, 50);
+            const cloner = new BuildingButton("Potato Cloners", counter, 200000, 250);
+
+            // Creating Upgrades
+            const harvester = new UpgradeButton("Harvesters", counter, 5000, 2, farm);
+            const poutineMaker = new UpgradeButton("Poutine Makers", counter, 50000, 2, foodTruck);
+            const fryer = new UpgradeButton("Instant Fryers", counter, 500000, 2, factory);
+            const dna = new UpgradeButton("Advanced DNAs", counter, 2000000, 2, cloner);
+            const upClickPotato = new FastHands("Fast Hands", counter, 200, clickPotato);
+
+            // Adding Bonus Buttons
+            counter.addBonusButton(new BonusButton("Purple Potato", counter, 4, 15));
+            counter.addBonusButton(new BonusButton("Sweet Potato", counter, 7, 30));
+            counter.addBonusButton(new BonusButton("Black Potato", counter, 2, 5));
+            counter.addBonusButton(new BonusButton("Yellow Potato", counter, 3, 15));
+            counter.addBonusButton(new BonusButton("Basket Potato", counter, 10, 45));
+
+        </script>
+        
+    </body>
+</html>
