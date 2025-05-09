@@ -10,7 +10,7 @@ Click the central potato to earn potatoes! Spend your potatoes on upgrades to in
 
 You can play **PotatoClicker** directly in your browser:
 
-[Play PotatoClicker](https://JohnnyLee15.github.io/PotatoClicker/)
+[Play PotatoClicker](https://JohnnyLee15.github.io/Potato-Clicker/)
 
 ## Features
 
