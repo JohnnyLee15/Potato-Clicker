@@ -17,7 +17,3 @@ You can play **PotatoClicker** directly in your browser:
 - Click-based resource generation
 - Upgrade system to boost efficiency
 - Idle mechanics for passive gameplay
-
-## Developer
-
-Created by Johnny Lee for COMP 2150 - Assignment 4 (Bonus).
