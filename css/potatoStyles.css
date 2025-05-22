@@ -1,7 +1,7 @@
 /* Cartoon Font */
 @font-face {
     font-family: "Luckiest Guy";
-    src: url(Luckiest_Guy/LuckiestGuy-Regular.ttf);
+    src: url(../fonts/LuckiestGuy-Regular.ttf);
 }
 
 /* Make sure user cannot drag images or text */
@@ -23,7 +23,7 @@ header {
 
 /* Background of game */
 body {
-    background-image: url(images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
