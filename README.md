@@ -18,5 +18,5 @@ You can play **PotatoClicker** directly in your browser:
 - Upgrade system to boost efficiency 🔧
 - Idle mechanics for passive gameplay ⏳
 
-## ⚖️ License  
+## License ⚖️
 This project is licensed under the MIT License – see the [LICENSE](https://opensource.org/licenses/MIT) file for details.
